@@ -10,7 +10,6 @@ class App
 
   def search
     endpoint = URI("https://api.nytimes.com/svc/search/v2/articlesearch.json")
-
     res = Faraday.get endpoint do |req|
        req.params['api-key'] = ENV['NYT_API_KEY']
        req.params['q'] = @query
