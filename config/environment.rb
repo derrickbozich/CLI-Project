@@ -2,5 +2,5 @@ require 'dotenv/load'
 require 'bundler/setup'
 Bundler.require(:default)
 
-
-require './app'
+require_relative '../lib/cli'
+require_relative '../lib/article'

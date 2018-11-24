@@ -1,14 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative '../app'
+require_relative '../config/environment'
 
-puts "Hi! Welcome to the wonderful world of Ruby programming."
-
-query = ''
-while query != "exit"
-  puts "Please enter a topic that you would like to explore via the New York Times API:"
-  query = gets.strip
-  app = App.new(query)
-  results = app.render_results
-  puts results
-end
+CLI.new.call
