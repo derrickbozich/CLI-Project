@@ -49,7 +49,7 @@ class CLI
   end
 
   def render_articles
-    articles = Article.all
+    articles = Article.all.last(10)
 
     list = articles.map.with_index(1) do |article, i|
       "#{i}. #{article.headline}"
