@@ -1,0 +1,9 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment'
+
+CLI.new.call
+
+def reload!
+  require_relative '../config/environment'
+end
